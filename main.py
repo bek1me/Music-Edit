@@ -56,7 +56,7 @@ async def post_in_channel(post: types.Message):
 TEXT=os.environ.get("TASDIQLANGAN_XABARI", "Yangi Obunachi {mention}\n\n{title} kanaliga qo'shildi\n\n")
 
 @dp.chat_join_request_handler(Kanal())
-async def Tasdiqlash (message: ChatJoinRequest):
+async def Tasdiqlash (message: types.ChatJoinRequest):
     chat=message.chat
     user=message.from_user
     print(f"{user.first_name} Obuna Boldi")
@@ -69,7 +69,7 @@ class Guruh(BoundFilter):
         return message.chat.type == types.ChatType.SUPERGROUP
 
 @dp.chat_join_request_handler(Guruh())
-async def Tasdiqlash (message: ChatJoinRequest):
+async def Tasdiqlash (message: types.ChatJoinRequest):
     chat=message.chat
     user=message.from_user
     print(f"{user.first_name} Obuna Boldi")
