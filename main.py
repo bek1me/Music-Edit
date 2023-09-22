@@ -2,7 +2,7 @@
 Bu echo bot.
 Bu har qanday kiruvchi matnli xabarlarni aks ettiradi.
 """
-
+import os
 import config
 import logging
 from aiogram import Bot, Dispatcher, executor, types
